@@ -36,7 +36,7 @@ const HeroSection = () => {
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-24">
           <button className="cta-button text-base md:text-lg font-semibold px-10 py-4">
-            Quero Transformar Minha Vida
+          👉 Quero acessar o Método VM agora
           </button>
           <button className="bg-secondary/60 text-gray-200 border border-white/10 font-medium py-4 px-10 rounded-lg 
             hover:bg-secondary hover:border-white/20 transition-all duration-300">
