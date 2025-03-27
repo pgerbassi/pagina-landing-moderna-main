@@ -1,0 +1,81 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 15% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 230 15% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 230 15% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 196 100% 54%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 230 15% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 230 15% 15%;
+    --muted-foreground: 230 10% 70%;
+
+    --accent: 196 100% 54%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 230 15% 20%;
+    --input: 230 15% 20%;
+    --ring: 196 100% 54%;
+
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-secondary/80 backdrop-blur-sm border border-white/10 shadow-md;
+  }
+
+  .section-padding {
+    @apply py-16 px-6 md:py-20 md:px-12 lg:px-24;
+  }
+
+  .cta-button {
+    @apply bg-primary text-white font-medium py-3 px-8 rounded-lg 
+    hover:shadow-lg hover:shadow-primary/20 transform transition-all duration-300 
+    ease-in-out hover:-translate-y-1 active:translate-y-0 active:shadow-md;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-10 text-white;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-primary to-blue-400 bg-clip-text text-transparent;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+}
